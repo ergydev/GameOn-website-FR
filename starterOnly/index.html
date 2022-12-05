@@ -54,7 +54,7 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span id="close"></span>
           <div class="modal-body">
             <form
               name="reserve"
@@ -71,7 +71,9 @@
                   id="first"
                   name="first"
                   minlength="2"
+                  required
                 /><br>
+                <p class="erreur__msg"></p>
               </div>
               <div
                 class="formData">
@@ -81,7 +83,9 @@
                   type="text"
                   id="last"
                   name="last"
+                  required
                 /><br>
+                <p class="erreur__msg"></p>
               </div>
               <div
                 class="formData">
@@ -91,7 +95,9 @@
                   type="email"
                   id="email"
                   name="email"
+                  required
                 /><br>
+                <p class="erreur__msg"></p>
               </div>
               <div
                 class="formData">
@@ -101,12 +107,15 @@
                   type="date"
                   id="birthdate"
                   name="birthdate"
+                  required
                 /><br>
+                <p class="erreur__msg"></p>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <p class="erreur__msg"></p>
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -177,6 +186,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p class="erreur__msg"></p>
               </div>
 
               <div
@@ -191,6 +201,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                <p class="erreur__msg"></p>
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
@@ -201,11 +212,22 @@
               </div>
               <input
                 class="btn-submit"
+                id="btn-validate"
                 type="submit"
                 class="button"
                 value="C'est parti"
               />
             </form>
+          </div>
+          <div class="modal-body-2">
+            <p id="thanks-message">Merci pour votre insription.</p>
+            <input
+              class="btn-submit"
+              id="btn-close"
+              type="submit"
+              class="button"
+              value="Fermer"
+            />
           </div>
         </div>
       </div>
