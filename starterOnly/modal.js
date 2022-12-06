@@ -16,9 +16,7 @@ const formData = document.querySelectorAll(".formData");
 const modalClose = document.getElementById('close');
 const btnClose = document.getElementById('btn-close');
 
-
 const modalValidate = document.querySelector('.btn-submit');
-
 
 let firstname = document.getElementById('first');
 let lastname = document.getElementById('last');
@@ -71,10 +69,12 @@ modalValidate.addEventListener('click', (event) => {
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  document.querySelector('body').style.overflow = "hidden";
 }
 // close modal form
 function closeModal(){
   modalbg.style.display = 'none';
+  document.querySelector('body').style.overflow = "auto";
 }
 
 
