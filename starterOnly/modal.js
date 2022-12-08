@@ -173,9 +173,6 @@ function validationPassed(){
   const hasError = validationError.firstnameError || validationError.lastnameError || validationError.birthError || validationError.emailError || validationError.quantityError || validationError.locationsError || validationError.conditionsError ;
 
   if(hasError == false){
-    // document.querySelectorAll('.formData').forEach(elem => elem.style.display = 'none');
-    // document.querySelector('.text-label').style.display = 'none';
-    // document.querySelector('#btn-validate').value = 'Fermer'
     document.querySelector('.modal-body').style.display = 'none';
     document.querySelector('.modal-body-2').style.display = 'flex';
     
